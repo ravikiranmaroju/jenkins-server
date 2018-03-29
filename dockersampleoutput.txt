@@ -1,0 +1,2037 @@
+  xorg-x11-font-utils.x86_64 1:7.5-20.el7        xorg-x11-fonts-Type1.noarch 0:7.5-9.el7
+
+Complete!
+[root@642dd2aa3e89 /]# docker ps -a
+bash: docker: command not found
+[root@642dd2aa3e89 /]# root@ip-172-31-92-171:~# uname
+Linux
+root@ip-172-31-92-171:~# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+642dd2aa3e89        centos              "/bin/bash"         5 minutes ago       Up 5 minutes                            naughty_noether
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+642dd2aa3e89        centos              "/bin/bash"         6 minutes ago       Up 6 minutes                            naughty_noether
+root@ip-172-31-92-171:~# history
+    1  apt-get update
+    2  apt-get -y install docker.io
+    3  docker --version
+    4  docker images
+    5  top
+    6  ls -l
+    7  pwd
+    8  docker --version
+    9  top
+   10  docker images
+   11  top
+   12  docker pull centos
+   13  docker images
+   14  docker run -it centos /bin/bash
+   15  uname
+   16  docker ps
+   17  docker ps -a
+   18  history
+root@ip-172-31-92-171:~# docker run -it ubuntu /bin/bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+1be7f2b886e8: Pull complete
+6fbc4a21b806: Pull complete
+c71a6f8e1378: Pull complete
+4be3072e5a37: Pull complete
+06c6d2f59700: Pull complete
+Digest: sha256:e27e9d7f7f28d67aa9e2d7540bdc2b33254b452ee8e60f388875e5b7d9b2b696
+Status: Downloaded newer image for ubuntu:latest
+root@beea70c486c6:/# uname
+Linux
+root@beea70c486c6:/# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Get:2 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [58.3 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:4 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [554 kB]
+Get:5 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
+Get:6 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [253 kB]
+Get:7 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [3486 B]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial/universe Sources [9802 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [239 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [924 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [747 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [18.5 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [5153 B]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [7179 B]
+Fetched 24.8 MB in 3s (7163 kB/s)
+Reading package lists... Done
+root@beea70c486c6:/# apt-get apache2
+E: Invalid operation apache2
+root@beea70c486c6:/# apt-get install apache2
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils file ifupdown iproute2 isc-dhcp-client isc-dhcp-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libasn1-8-heimdal libatm1 libdns-export162 libexpat1 libffi6 libgdbm3 libgmp10 libgnutls30 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libicu55 libidn11 libisc-export160 libkrb5-26-heimdal libldap-2.4-2 liblua5.1-0 libmagic1 libmnl0 libnettle6
+  libp11-kit0 libperl5.22 libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal libxml2 libxtables11
+  mime-support netbase openssl perl perl-modules-5.22 rename sgml-base ssl-cert xml-core
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw ppp rdnssd iproute2-doc resolvconf avahi-autoipd isc-dhcp-client-ddns apparmor
+  gnutls-bin libsasl2-modules-otp libsasl2-modules-ldap libsasl2-modules-sql libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal ca-certificates perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make sgml-base-doc openssl-blacklist debhelper
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils file ifupdown iproute2 isc-dhcp-client isc-dhcp-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libasn1-8-heimdal libatm1 libdns-export162 libexpat1 libffi6 libgdbm3 libgmp10 libgnutls30 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libicu55 libidn11 libisc-export160 libkrb5-26-heimdal libldap-2.4-2 liblua5.1-0 libmagic1 libmnl0 libnettle6
+  libp11-kit0 libperl5.22 libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal libxml2 libxtables11
+  mime-support netbase openssl perl perl-modules-5.22 rename sgml-base ssl-cert xml-core
+0 upgraded, 57 newly installed, 0 to remove and 7 not upgraded.
+Need to get 22.7 MB of archives.
+After this operation, 102 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmnl0 amd64 1.0.3-5 [12.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-modules-5.22 all 5.22.1-9ubuntu0.2 [2661 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libperl5.22 amd64 5.22.1-9ubuntu0.2 [3391 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl amd64 5.22.1-9ubuntu0.2 [237 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 mime-support all 3.59ubuntu1 [31.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 libapr1 amd64 1.5.2-3 [86.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1 amd64 2.1.0-7ubuntu0.16.04.3 [71.2 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.10 [1083 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1 amd64 1.5.4-1build1 [77.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsqlite3-0 amd64 3.11.0-1ubuntu1 [396 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-dbd-sqlite3 amd64 1.5.4-1build1 [10.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnettle6 amd64 3.2-1ubuntu0.16.04.1 [93.5 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhogweed4 amd64 3.2-1ubuntu0.16.04.1 [136 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libidn11 amd64 1.32-3ubuntu1.2 [46.5 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libp11-kit0 amd64 0.23.2-5~ubuntu16.04.1 [105 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.3 [43.5 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgnutls30 amd64 3.4.10-4ubuntu1.4 [548 kB]
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libroken18-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [41.4 kB]
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasn1-8-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [174 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhcrypto4-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [85.0 kB]
+Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimbase1-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [29.3 kB]
+Get:27 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwind0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [47.8 kB]
+Get:28 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhx509-5-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [107 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-26-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [202 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimntlm0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [15.1 kB]
+Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi3-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [96.1 kB]
+Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14build1 [14.5 kB]
+Get:33 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14build1 [48.7 kB]
+Get:34 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.2 [160 kB]
+Get:35 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-ldap amd64 1.5.4-1build1 [8720 B]
+Get:36 http://archive.ubuntu.com/ubuntu xenial/main amd64 liblua5.1-0 amd64 5.1.5-8ubuntu1 [102 kB]
+Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libicu55 amd64 55.1-7ubuntu0.3 [7658 kB]
+Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libxml2 amd64 2.9.3+dfsg1-1ubuntu0.5 [697 kB]
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-bin amd64 2.4.18-2ubuntu3.5 [925 kB]
+Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-utils amd64 2.4.18-2ubuntu3.5 [82.3 kB]
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-data all 2.4.18-2ubuntu3.5 [162 kB]
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2 amd64 2.4.18-2ubuntu3.5 [86.7 kB]
+Get:43 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmagic1 amd64 1:5.25-2ubuntu1 [216 kB]
+Get:44 http://archive.ubuntu.com/ubuntu xenial/main amd64 file amd64 1:5.25-2ubuntu1 [21.2 kB]
+Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 iproute2 amd64 4.3.0-1ubuntu3.16.04.3 [522 kB]
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.2 [54.9 kB]
+Get:47 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.10 [153 kB]
+Get:48 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.10 [666 kB]
+Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.7 [223 kB]
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.7 [105 kB]
+Get:51 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxtables11 amd64 1.6.0-2ubuntu3 [27.2 kB]
+Get:52 http://archive.ubuntu.com/ubuntu xenial/main amd64 netbase all 5.3 [12.9 kB]
+Get:53 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules amd64 2.1.26.dfsg1-14build1 [47.5 kB]
+Get:54 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssl amd64 1.0.2g-1ubuntu4.10 [492 kB]
+Get:55 http://archive.ubuntu.com/ubuntu xenial/main amd64 xml-core all 0.13+nmu2 [23.3 kB]
+Get:56 http://archive.ubuntu.com/ubuntu xenial/main amd64 rename all 0.20-4 [12.0 kB]
+Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 ssl-cert all 1.0.37 [16.9 kB]
+Fetched 22.7 MB in 3s (6742 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libatm1:amd64.
+(Reading database ... 4768 files and directories currently installed.)
+Preparing to unpack .../libatm1_1%3a2.5.1-1.5_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-1.5) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../libmnl0_1.0.3-5_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.3-5) ...
+Selecting previously unselected package libgdbm3:amd64.
+Preparing to unpack .../libgdbm3_1.8.3-13.1_amd64.deb ...
+Unpacking libgdbm3:amd64 (1.8.3-13.1) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Selecting previously unselected package perl-modules-5.22.
+Preparing to unpack .../perl-modules-5.22_5.22.1-9ubuntu0.2_all.deb ...
+Unpacking perl-modules-5.22 (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package libperl5.22:amd64.
+Preparing to unpack .../libperl5.22_5.22.1-9ubuntu0.2_amd64.deb ...
+Unpacking libperl5.22:amd64 (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../perl_5.22.1-9ubuntu0.2_amd64.deb ...
+Unpacking perl (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../mime-support_3.59ubuntu1_all.deb ...
+Unpacking mime-support (3.59ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../libapr1_1.5.2-3_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.2-3) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.1.0-7ubuntu0.16.04.3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Selecting previously unselected package libssl1.0.0:amd64.
+Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.10_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.2g-1ubuntu4.10) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../libsqlite3-0_3.11.0-1ubuntu1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libnettle6:amd64.
+Preparing to unpack .../libnettle6_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libhogweed4:amd64.
+Preparing to unpack .../libhogweed4_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libidn11:amd64.
+Preparing to unpack .../libidn11_1.32-3ubuntu1.2_amd64.deb ...
+Unpacking libidn11:amd64 (1.32-3ubuntu1.2) ...
+Selecting previously unselected package libffi6:amd64.
+Preparing to unpack .../libffi6_3.2.1-4_amd64.deb ...
+Unpacking libffi6:amd64 (3.2.1-4) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../libp11-kit0_0.23.2-5~ubuntu16.04.1_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.3_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Selecting previously unselected package libgnutls30:amd64.
+Preparing to unpack .../libgnutls30_3.4.10-4ubuntu1.4_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.4.10-4ubuntu1.4) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../libroken18-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.2_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package liblua5.1-0:amd64.
+Preparing to unpack .../liblua5.1-0_5.1.5-8ubuntu1_amd64.deb ...
+Unpacking liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Selecting previously unselected package libicu55:amd64.
+Preparing to unpack .../libicu55_55.1-7ubuntu0.3_amd64.deb ...
+Unpacking libicu55:amd64 (55.1-7ubuntu0.3) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.3+dfsg1-1ubuntu0.5_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.5) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2-bin (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../apache2-utils_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2-utils (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.18-2ubuntu3.5_all.deb ...
+Unpacking apache2-data (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2 (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../libmagic1_1%3a5.25-2ubuntu1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.25-2ubuntu1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../file_1%3a5.25-2ubuntu1_amd64.deb ...
+Unpacking file (1:5.25-2ubuntu1) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../iproute2_4.3.0-1ubuntu3.16.04.3_amd64.deb ...
+Unpacking iproute2 (4.3.0-1ubuntu3.16.04.3) ...
+Selecting previously unselected package ifupdown.
+Preparing to unpack .../ifupdown_0.8.10ubuntu1.2_amd64.deb ...
+Unpacking ifupdown (0.8.10ubuntu1.2) ...
+Selecting previously unselected package libisc-export160.
+Preparing to unpack .../libisc-export160_1%3a9.10.3.dfsg.P4-8ubuntu1.10_amd64.deb ...
+Unpacking libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Selecting previously unselected package libdns-export162.
+Preparing to unpack .../libdns-export162_1%3a9.10.3.dfsg.P4-8ubuntu1.10_amd64.deb ...
+Unpacking libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Selecting previously unselected package isc-dhcp-client.
+Preparing to unpack .../isc-dhcp-client_4.3.3-5ubuntu12.7_amd64.deb ...
+Unpacking isc-dhcp-client (4.3.3-5ubuntu12.7) ...
+Selecting previously unselected package isc-dhcp-common.
+Preparing to unpack .../isc-dhcp-common_4.3.3-5ubuntu12.7_amd64.deb ...
+Unpacking isc-dhcp-common (4.3.3-5ubuntu12.7) ...
+Selecting previously unselected package libxtables11:amd64.
+Preparing to unpack .../libxtables11_1.6.0-2ubuntu3_amd64.deb ...
+Unpacking libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../archives/netbase_5.3_all.deb ...
+Unpacking netbase (5.3) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../openssl_1.0.2g-1ubuntu4.10_amd64.deb ...
+Unpacking openssl (1.0.2g-1ubuntu4.10) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Unpacking xml-core (0.13+nmu2) ...
+Selecting previously unselected package rename.
+Preparing to unpack .../archives/rename_0.20-4_all.deb ...
+Unpacking rename (0.20-4) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.37_all.deb ...
+Unpacking ssl-cert (1.0.37) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21) ...
+Setting up libatm1:amd64 (1:2.5.1-1.5) ...
+Setting up libmnl0:amd64 (1.0.3-5) ...
+Setting up libgdbm3:amd64 (1.8.3-13.1) ...
+Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Setting up perl-modules-5.22 (5.22.1-9ubuntu0.2) ...
+Setting up libperl5.22:amd64 (5.22.1-9ubuntu0.2) ...
+Setting up perl (5.22.1-9ubuntu0.2) ...
+update-alternatives: using /usr/bin/prename to provide /usr/bin/rename (rename) in auto mode
+Setting up mime-support (3.59ubuntu1) ...
+Setting up libapr1:amd64 (1.5.2-3) ...
+Setting up libexpat1:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Setting up libssl1.0.0:amd64 (1.0.2g-1ubuntu4.10) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Setting up libaprutil1:amd64 (1.5.4-1build1) ...
+Setting up libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Setting up libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libidn11:amd64 (1.32-3ubuntu1.2) ...
+Setting up libffi6:amd64 (3.2.1-4) ...
+Setting up libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Setting up libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Setting up libgnutls30:amd64 (3.4.10-4ubuntu1.4) ...
+Setting up libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Setting up libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Setting up liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Setting up libicu55:amd64 (55.1-7ubuntu0.3) ...
+Setting up libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.5) ...
+Setting up apache2-bin (2.4.18-2ubuntu3.5) ...
+Setting up apache2-utils (2.4.18-2ubuntu3.5) ...
+Setting up apache2-data (2.4.18-2ubuntu3.5) ...
+Setting up apache2 (2.4.18-2ubuntu3.5) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libmagic1:amd64 (1:5.25-2ubuntu1) ...
+Setting up file (1:5.25-2ubuntu1) ...
+Setting up iproute2 (4.3.0-1ubuntu3.16.04.3) ...
+Setting up ifupdown (0.8.10ubuntu1.2) ...
+Creating /etc/network/interfaces.
+Setting up libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Setting up libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Setting up isc-dhcp-client (4.3.3-5ubuntu12.7) ...
+Setting up isc-dhcp-common (4.3.3-5ubuntu12.7) ...
+Setting up libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Setting up netbase (5.3) ...
+Setting up libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up openssl (1.0.2g-1ubuntu4.10) ...
+Setting up xml-core (0.13+nmu2) ...
+Setting up rename (0.20-4) ...
+update-alternatives: using /usr/bin/file-rename to provide /usr/bin/rename (rename) in auto mode
+Setting up ssl-cert (1.0.37) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21) ...
+Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+root@beea70c486c6:/# rootdocker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+beea70c486c6        ubuntu              "/bin/bash"         2 minutes ago       Up 2 minutes                            stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         9 minutes ago       Up 9 minutes                            naughty_noether
+root@ip-172-31-92-171:~# docker commit beea70c486c6 newimageubuntu
+sha256:192f4b21c78eb2fd115f487d71c74e87745548116ab5c55031a512672fdc0be5
+root@ip-172-31-92-171:~# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimageubuntu      latest              192f4b21c78e        8 seconds ago       250 MB
+ubuntu              latest              0458a4468cbc        2 weeks ago         112 MB
+centos              latest              ff426288ea90        4 weeks ago         207 MB
+root@ip-172-31-92-171:~# history
+    1  apt-get update
+    2  apt-get -y install docker.io
+    3  docker --version
+    4  docker images
+    5  top
+    6  ls -l
+    7  pwd
+    8  docker --version
+    9  top
+   10  docker images
+   11  top
+   12  docker pull centos
+   13  docker images
+   14  docker run -it centos /bin/bash
+   15  uname
+   16  docker ps
+   17  docker ps -a
+   18  history
+   19  docker run -it ubuntu /bin/bash
+   20  docker ps
+   21  docker commit beea70c486c6 newimageubuntu
+   22  docker images
+   23  history
+root@ip-172-31-92-171:~# docker run -it newimageubuntu /bin/bash
+root@419f051e17e8:/# service apache2 status
+ * apache2 is not running
+root@419f051e17e8:/# apache2 --version
+[Fri Feb 09 12:25:15.880587 2018] [core:warn] [pid 19] AH00111: Config variable ${APACHE_LOCK_DIR} is not defined
+[Fri Feb 09 12:25:15.880701 2018] [core:warn] [pid 19] AH00111: Config variable ${APACHE_PID_FILE} is not defined
+[Fri Feb 09 12:25:15.880749 2018] [core:warn] [pid 19] AH00111: Config variable ${APACHE_RUN_USER} is not defined
+[Fri Feb 09 12:25:15.880778 2018] [core:warn] [pid 19] AH00111: Config variable ${APACHE_RUN_GROUP} is not defined
+[Fri Feb 09 12:25:15.880825 2018] [core:warn] [pid 19] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Fri Feb 09 12:25:15.885655 2018] [core:warn] [pid 19:tid 140098172417920] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Fri Feb 09 12:25:15.885955 2018] [core:warn] [pid 19:tid 140098172417920] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Fri Feb 09 12:25:15.886002 2018] [core:warn] [pid 19:tid 140098172417920] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+AH00526: Syntax error on line 74 of /etc/apache2/apache2.conf:
+Invalid Mutex directory in argument file:${APACHE_LOCK_DIR}
+root@419f051e17e8:/# service apache2 start
+ * Starting Apache httpd web server apache2                                                                                                                             AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.4. Set the 'ServerName' directive globally to suppress this message
+ *
+root@419f051e17e8:/# service apache2 status
+ * apache2 is running
+root@419f051e17e8:/# quit
+bash: quit: command not found
+root@419f051e17e8:/# exit
+exit
+root@ip-172-31-92-171:~# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+beea70c486c6        ubuntu              "/bin/bash"         4 minutes ago       Up 4 minutes                            stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         12 minutes ago      Up 12 minutes                           naughty_noether
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                        PORTS               NAMES
+419f051e17e8        newimageubuntu      "/bin/bash"         About a minute ago   Exited (127) 16 seconds ago                       heuristic_blackwell
+beea70c486c6        ubuntu              "/bin/bash"         5 minutes ago        Up 5 minutes                                      stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         12 minutes ago       Up 12 minutes                                     naughty_noether
+root@ip-172-31-92-171:~# history
+    1  apt-get update
+    2  apt-get -y install docker.io
+    3  docker --version
+    4  docker images
+    5  top
+    6  ls -l
+    7  pwd
+    8  docker --version
+    9  top
+   10  docker images
+   11  top
+   12  docker pull centos
+   13  docker images
+   14  docker run -it centos /bin/bash
+   15  uname
+   16  docker ps
+   17  docker ps -a
+   18  history
+   19  docker run -it ubuntu /bin/bash
+   20  docker ps
+   21  docker commit beea70c486c6 newimageubuntu
+   22  docker images
+   23  history
+   24  docker run -it newimageubuntu /bin/bash
+   25  docker ps
+   26  docker ps -a
+   27  history
+root@ip-172-31-92-171:~# docker exec -it 419f051e17e8
+"docker exec" requires at least 2 argument(s).
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+root@ip-172-31-92-171:~# docker exec -it 419f051e17e8 /bin/bash
+Error response from daemon: Container 419f051e17e8470ad65ee3a9254738653eef5f17bb0e71268958cc327b195366 is not running
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                       PORTS               NAMES
+419f051e17e8        newimageubuntu      "/bin/bash"         3 minutes ago       Exited (127) 2 minutes ago                       heuristic_blackwell
+beea70c486c6        ubuntu              "/bin/bash"         6 minutes ago       Up 6 minutes                                     stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         14 minutes ago      Up 14 minutes                                    naughty_noether
+root@ip-172-31-92-171:~# docker exec -it 419f051e17e8 /bin/bash^C
+root@ip-172-31-92-171:~# docker exec -it beea70c486c6 /bin/bash
+root@beea70c486c6:/# exit
+exit
+root@ip-172-31-92-171:~# docker exec -it beea70c486c6 /bin/bash
+root@beea70c486c6:/# docker run -it 419f051e17e8 /bin/bash
+bash: docker: command not found
+root@beea70c486c6:/# exit
+exit
+root@ip-172-31-92-171:~# docker run -it 419f051e17e8 /bin/bash
+Unable to find image '419f051e17e8:latest' locally
+docker: Error response from daemon: repository 419f051e17e8 not found: does not exist or no pull access.
+See 'docker run --help'.
+root@ip-172-31-92-171:~#
+Using username "ubuntu".
+Authenticating with public key "imported-openssh-key"
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1049-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+23 packages can be updated.
+8 updates are security updates.
+
+
+Last login: Fri Feb  9 11:19:29 2018 from 183.82.226.90
+ubuntu@ip-172-31-92-171:~$ sudo -i
+root@ip-172-31-92-171:~# pwd
+/root
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                        PORTS               NAMES
+419f051e17e8        newimageubuntu      "/bin/bash"         32 minutes ago      Exited (127) 31 minutes ago                       heuristic_blackwell
+beea70c486c6        ubuntu              "/bin/bash"         36 minutes ago      Up 36 minutes                                     stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         43 minutes ago      Up 43 minutes                                     naughty_noether
+root@ip-172-31-92-171:~# docker stop beea70c486c6
+beea70c486c6
+root@ip-172-31-92-171:~# docker exec -it beea70c486c6
+"docker exec" requires at least 2 argument(s).
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                        PORTS               NAMES
+419f051e17e8        newimageubuntu      "/bin/bash"         33 minutes ago      Exited (127) 32 minutes ago                       heuristic_blackwell
+beea70c486c6        ubuntu              "/bin/bash"         36 minutes ago      Exited (0) 37 seconds ago                         stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         44 minutes ago      Up 44 minutes                                     naughty_noether
+root@ip-172-31-92-171:~# docker start beea70c486c6
+beea70c486c6
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                        PORTS               NAMES
+419f051e17e8        newimageubuntu      "/bin/bash"         34 minutes ago      Exited (127) 32 minutes ago                       heuristic_blackwell
+beea70c486c6        ubuntu              "/bin/bash"         37 minutes ago      Up 5 seconds                                      stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         44 minutes ago      Up 44 minutes                                     naughty_noether
+root@ip-172-31-92-171:~# docker exec -it beea70c486c6
+"docker exec" requires at least 2 argument(s).
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+root@ip-172-31-92-171:~# docker stop beea70c486c6
+beea70c486c6
+root@ip-172-31-92-171:~# docker exec -it beea70c486c6 /bin/bash
+Error response from daemon: Container beea70c486c69a7d604725b7f75e8c640fe01389edafb2384405c27251975b1b is not running
+root@ip-172-31-92-171:~# docker start beea70c486c6
+beea70c486c6
+root@ip-172-31-92-171:~# docker exec -it beea70c486c6 /bin/bash
+root@beea70c486c6:/#
+root@beea70c486c6:/#
+root@beea70c486c6:/#
+root@beea70c486c6:/# top
+top - 13:04:49 up  2:01,  0 users,  load average: 0.00, 0.00, 0.00
+Tasks:   3 total,   1 running,   2 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1014552 total,    73048 free,   102556 used,   838948 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   715404 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+    1 root      20   0   18232   2900   2628 S  0.0  0.3   0:00.01 bash
+    9 root      20   0   18236   3248   2780 S  0.0  0.3   0:00.01 bash
+   17 root      20   0   36664   3140   2688 R  0.0  0.3   0:00.01 top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root@beea70c486c6:/# docker ps -a
+bash: docker: command not found
+root@beea70c486c6:/# exit
+exit
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                        PORTS               NAMES
+419f051e17e8        newimageubuntu      "/bin/bash"         40 minutes ago      Exited (127) 39 minutes ago                       heuristic_blackwell
+beea70c486c6        ubuntu              "/bin/bash"         43 minutes ago      Up 5 minutes                                      stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         51 minutes ago      Up 51 minutes                                     naughty_noether
+root@ip-172-31-92-171:~# docker rm 419f051e17e8
+419f051e17e8
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+beea70c486c6        ubuntu              "/bin/bash"         44 minutes ago      Up 6 minutes                            stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         51 minutes ago      Up 51 minutes                           naughty_noether
+root@ip-172-31-92-171:~# docker rmi beea70c486c6
+Error response from daemon: No such image: beea70c486c6:latest
+root@ip-172-31-92-171:~#
+root@ip-172-31-92-171:~# top
+top - 13:08:26 up  2:05,  3 users,  load average: 0.00, 0.00, 0.00
+Tasks: 123 total,   1 running, 122 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1014552 total,    80452 free,    95016 used,   839084 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   722956 avail Mem
+Change delay from 3.0 to
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+15057 root      20   0   40532   3564   2996 R  0.3  0.4   0:00.02 top
+    1 root      20   0   37792   5328   3492 S  0.0  0.5   0:02.78 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.13 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.10 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.03 watchdog/0
+   11 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 perf
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatch
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback
+   19 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd
+   20 root      39  19       0      0      0 S  0.0  0.0   0:00.02 khugepaged
+   21 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 crypto
+   22 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd
+   23 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   24 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kblockd
+   25 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 ata_sff
+   26 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 md
+   27 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 devfreq_wq
+   30 root      20   0       0      0      0 S  0.0  0.0   0:00.14 kswapd0
+   31 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 vmstat
+   32 root      20   0       0      0      0 S  0.0  0.0   0:00.00 fsnotify_mark
+   33 root      20   0       0      0      0 S  0.0  0.0   0:00.00 ecryptfs-kthrea
+   49 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kthrotld
+   50 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   51 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   52 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   53 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   54 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   55 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   56 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+root@ip-172-31-92-171:~# docker commit beea70c486c6 newimageubuntu
+
+sha256:6aec686a30168ecf3d62b92325a671f915982c0c233a6a25c3964671ec848501
+root@ip-172-31-92-171:~#
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+beea70c486c6        ubuntu              "/bin/bash"         47 minutes ago      Up 9 minutes                            stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         54 minutes ago      Up 54 minutes                           naughty_noether
+root@ip-172-31-92-171:~# docker commit beea70c486c6 newimageubuntu
+sha256:0f032b4e55374d16a3226d7900107390b53f6d7e18715d45dcf26821102b73ab
+root@ip-172-31-92-171:~# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+beea70c486c6        ubuntu              "/bin/bash"         47 minutes ago      Up 9 minutes                            stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         55 minutes ago      Up 55 minutes                           naughty_noether
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+beea70c486c6        ubuntu              "/bin/bash"         47 minutes ago      Up 9 minutes                            stoic_mcnulty
+642dd2aa3e89        centos              "/bin/bash"         55 minutes ago      Up 55 minutes                           naughty_noether
+root@ip-172-31-92-171:~# docker commit beea70c486c6 newimageubuntuin
+sha256:e8d551a36a0066d5136a2ebbcde561de4dc58d0bd322f14f3f463034896d9d2f
+root@ip-172-31-92-171:~# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+newimageubuntuin    latest              e8d551a36a00        18 seconds ago       250 MB
+newimageubuntu      latest              0f032b4e5537        About a minute ago   250 MB
+<none>              <none>              6aec686a3016        About a minute ago   250 MB
+<none>              <none>              192f4b21c78e        46 minutes ago       250 MB
+ubuntu              latest              0458a4468cbc        2 weeks ago          112 MB
+centos              latest              ff426288ea90        4 weeks ago          207 MB
+root@ip-172-31-92-171:~# docker rm beea70c486c6
+Error response from daemon: You cannot remove a running container beea70c486c69a7d604725b7f75e8c640fe01389edafb2384405c27251975b1b. Stop the container before attempting removal or use -f
+root@ip-172-31-92-171:~# docker stop beea70c486c6
+beea70c486c6
+root@ip-172-31-92-171:~# docker rm beea70c486c6
+beea70c486c6
+root@ip-172-31-92-171:~# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+newimageubuntuin    latest              e8d551a36a00        About a minute ago   250 MB
+newimageubuntu      latest              0f032b4e5537        2 minutes ago        250 MB
+<none>              <none>              6aec686a3016        2 minutes ago        250 MB
+<none>              <none>              192f4b21c78e        47 minutes ago       250 MB
+ubuntu              latest              0458a4468cbc        2 weeks ago          112 MB
+centos              latest              ff426288ea90        4 weeks ago          207 MB
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+642dd2aa3e89        centos              "/bin/bash"         57 minutes ago      Up 57 minutes                           naughty_noether
+root@ip-172-31-92-171:~# docker rmi newimageubuntuin
+Untagged: newimageubuntuin:latest
+Deleted: sha256:e8d551a36a0066d5136a2ebbcde561de4dc58d0bd322f14f3f463034896d9d2f
+root@ip-172-31-92-171:~# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimageubuntu      latest              0f032b4e5537        3 minutes ago       250 MB
+<none>              <none>              6aec686a3016        3 minutes ago       250 MB
+<none>              <none>              192f4b21c78e        48 minutes ago      250 MB
+ubuntu              latest              0458a4468cbc        2 weeks ago         112 MB
+centos              latest              ff426288ea90        4 weeks ago         207 MB
+root@ip-172-31-92-171:~# docker rmi *
+Error response from daemon: Error parsing reference: "*" is not a valid repository/tag: invalid reference format
+root@ip-172-31-92-171:~# docker rmi cent*
+Error response from daemon: Error parsing reference: "cent*" is not a valid repository/tag: invalid reference format
+root@ip-172-31-92-171:~# top
+top - 13:17:59 up  2:14,  2 users,  load average: 0.00, 0.00, 0.00
+Tasks: 115 total,   1 running, 114 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.3 us,  0.0 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1014552 total,   393904 free,   100404 used,   520244 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   720248 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+    1 root      20   0   37792   5044   3208 S  0.0  0.5   0:02.79 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.13 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.12 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.03 watchdog/0
+   11 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 perf
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatch
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback
+   19 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd
+   20 root      39  19       0      0      0 S  0.0  0.0   0:00.02 khugepaged
+   21 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 crypto
+   22 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd
+   23 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   24 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kblockd
+   25 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 ata_sff
+   26 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 md
+   27 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 devfreq_wq
+   30 root      20   0       0      0      0 S  0.0  0.0   0:00.21 kswapd0
+   31 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 vmstat
+   32 root      20   0       0      0      0 S  0.0  0.0   0:00.00 fsnotify_mark
+   33 root      20   0       0      0      0 S  0.0  0.0   0:00.00 ecryptfs-kthrea
+   49 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kthrotld
+   50 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   51 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   52 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   53 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   54 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   55 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   56 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   57 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+root@ip-172-31-92-171:~# netstat -ntulp | grep :80
+root@ip-172-31-92-171:~# netstat -ntulp | grep :80 > oy.txt
+root@ip-172-31-92-171:~# ls -l
+total 0
+-rw-r--r-- 1 root root 0 Feb  9 13:19 oy.txt
+root@ip-172-31-92-171:~# cat oy.txt
+root@ip-172-31-92-171:~# netstat -ntulp |grep :80 > oy.txt
+root@ip-172-31-92-171:~# ls -l
+total 0
+-rw-r--r-- 1 root root 0 Feb  9 13:19 oy.txt
+root@ip-172-31-92-171:~# netstat -ntulp |grep :22 > oy.txt
+root@ip-172-31-92-171:~# ls -l
+total 4
+-rw-r--r-- 1 root root 194 Feb  9 13:19 oy.txt
+root@ip-172-31-92-171:~# more oy.txt
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1322/sshd
+tcp6       0      0 :::22                   :::*                    LISTEN      1322/sshd
+root@ip-172-31-92-171:~# netstat -ntulp |grep :80 > oy1.txt
+root@ip-172-31-92-171:~# ls -l
+total 4
+-rw-r--r-- 1 root root   0 Feb  9 13:21 oy1.txt
+-rw-r--r-- 1 root root 194 Feb  9 13:19 oy.txt
+root@ip-172-31-92-171:~# netstat -ntulp |grep :80 > oy1.txt
+root@ip-172-31-92-171:~# ls -l
+total 4
+-rw-r--r-- 1 root root   0 Feb  9 13:21 oy1.txt
+-rw-r--r-- 1 root root 194 Feb  9 13:19 oy.txt
+root@ip-172-31-92-171:~# netstat -ntulp |grep :81 > oy1.txt
+root@ip-172-31-92-171:~# ls -l
+total 4
+-rw-r--r-- 1 root root   0 Feb  9 13:22 oy1.txt
+-rw-r--r-- 1 root root 194 Feb  9 13:19 oy.txt
+root@ip-172-31-92-171:~# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimageubuntu      latest              0f032b4e5537        13 minutes ago      250 MB
+<none>              <none>              6aec686a3016        14 minutes ago      250 MB
+<none>              <none>              192f4b21c78e        58 minutes ago      250 MB
+ubuntu              latest              0458a4468cbc        2 weeks ago         112 MB
+centos              latest              ff426288ea90        4 weeks ago         207 MB
+root@ip-172-31-92-171:~# docker run -it -p 8080:80 ubuntu /bin/bash
+root@38194aee6ea1:/# netstat -ntulp |grep :80 > txt,txt
+bash: netstat: command not found
+root@38194aee6ea1:/# netstat -ntulp |grep :80 > txt.txt
+bash: netstat: command not found
+root@38194aee6ea1:/# netstat -ntulp | grep :80
+bash: netstat: command not found
+root@38194aee6ea1:/# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Get:2 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [58.3 kB]
+Get:3 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [554 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:5 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
+Get:6 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [253 kB]
+Get:7 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [3486 B]
+Get:8 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial/universe Sources [9802 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [239 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [924 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [747 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [18.5 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [5153 B]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [7179 B]
+Fetched 24.8 MB in 3s (6691 kB/s)
+Reading package lists... Done
+root@38194aee6ea1:/# apt-get install net-tools
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 7 not upgraded.
+Need to get 175 kB of archives.
+After this operation, 725 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 net-tools amd64 1.60-26ubuntu1 [175 kB]
+Fetched 175 kB in 0s (252 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package net-tools.
+(Reading database ... 4768 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60-26ubuntu1_amd64.deb ...
+Unpacking net-tools (1.60-26ubuntu1) ...
+Setting up net-tools (1.60-26ubuntu1) ...
+root@38194aee6ea1:/# netstat -ntulp | grep :80 > txt.txt
+root@38194aee6ea1:/# ls -l
+total 64
+drwxr-xr-x   2 root root 4096 Feb  9 13:24 bin
+drwxr-xr-x   2 root root 4096 Apr 12  2016 boot
+drwxr-xr-x   5 root root  360 Feb  9 13:23 dev
+drwxr-xr-x  45 root root 4096 Feb  9 13:23 etc
+drwxr-xr-x   2 root root 4096 Apr 12  2016 home
+drwxr-xr-x   8 root root 4096 Sep 13  2015 lib
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 lib64
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 media
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 mnt
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 opt
+dr-xr-xr-x 134 root root    0 Feb  9 13:23 proc
+drwx------   2 root root 4096 Jan 23 22:49 root
+drwxr-xr-x   6 root root 4096 Jan 23 22:49 run
+drwxr-xr-x   2 root root 4096 Feb  9 13:24 sbin
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 srv
+dr-xr-xr-x  13 root root    0 Feb  9 13:23 sys
+drwxrwxrwt   2 root root 4096 Feb  9 13:24 tmp
+-rw-r--r--   1 root root    0 Feb  9 13:23 txt,txt
+-rw-r--r--   1 root root    0 Feb  9 13:24 txt.txt
+drwxr-xr-x  13 root root 4096 Feb  9 13:24 usr
+drwxr-xr-x  16 root root 4096 Feb  9 13:24 var
+root@38194aee6ea1:/# apt-get install apache2
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils file ifupdown iproute2 isc-dhcp-client isc-dhcp-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libasn1-8-heimdal libatm1 libdns-export162 libexpat1 libffi6 libgdbm3 libgmp10 libgnutls30 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libicu55 libidn11 libisc-export160 libkrb5-26-heimdal libldap-2.4-2 liblua5.1-0 libmagic1 libmnl0 libnettle6
+  libp11-kit0 libperl5.22 libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal libxml2 libxtables11
+  mime-support netbase openssl perl perl-modules-5.22 rename sgml-base ssl-cert xml-core
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw ppp rdnssd iproute2-doc resolvconf avahi-autoipd isc-dhcp-client-ddns apparmor
+  gnutls-bin libsasl2-modules-otp libsasl2-modules-ldap libsasl2-modules-sql libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal ca-certificates perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make sgml-base-doc openssl-blacklist debhelper
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils file ifupdown iproute2 isc-dhcp-client isc-dhcp-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libasn1-8-heimdal libatm1 libdns-export162 libexpat1 libffi6 libgdbm3 libgmp10 libgnutls30 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libicu55 libidn11 libisc-export160 libkrb5-26-heimdal libldap-2.4-2 liblua5.1-0 libmagic1 libmnl0 libnettle6
+  libp11-kit0 libperl5.22 libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal libxml2 libxtables11
+  mime-support netbase openssl perl perl-modules-5.22 rename sgml-base ssl-cert xml-core
+0 upgraded, 57 newly installed, 0 to remove and 7 not upgraded.
+Need to get 22.7 MB of archives.
+After this operation, 102 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmnl0 amd64 1.0.3-5 [12.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-modules-5.22 all 5.22.1-9ubuntu0.2 [2661 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libperl5.22 amd64 5.22.1-9ubuntu0.2 [3391 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl amd64 5.22.1-9ubuntu0.2 [237 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 mime-support all 3.59ubuntu1 [31.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 libapr1 amd64 1.5.2-3 [86.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1 amd64 2.1.0-7ubuntu0.16.04.3 [71.2 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.10 [1083 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1 amd64 1.5.4-1build1 [77.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsqlite3-0 amd64 3.11.0-1ubuntu1 [396 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-dbd-sqlite3 amd64 1.5.4-1build1 [10.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnettle6 amd64 3.2-1ubuntu0.16.04.1 [93.5 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhogweed4 amd64 3.2-1ubuntu0.16.04.1 [136 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libidn11 amd64 1.32-3ubuntu1.2 [46.5 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libp11-kit0 amd64 0.23.2-5~ubuntu16.04.1 [105 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.3 [43.5 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgnutls30 amd64 3.4.10-4ubuntu1.4 [548 kB]
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libroken18-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [41.4 kB]
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasn1-8-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [174 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhcrypto4-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [85.0 kB]
+Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimbase1-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [29.3 kB]
+Get:27 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwind0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [47.8 kB]
+Get:28 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhx509-5-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [107 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-26-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [202 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimntlm0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [15.1 kB]
+Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi3-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [96.1 kB]
+Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14build1 [14.5 kB]
+Get:33 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14build1 [48.7 kB]
+Get:34 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.2 [160 kB]
+Get:35 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-ldap amd64 1.5.4-1build1 [8720 B]
+Get:36 http://archive.ubuntu.com/ubuntu xenial/main amd64 liblua5.1-0 amd64 5.1.5-8ubuntu1 [102 kB]
+Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libicu55 amd64 55.1-7ubuntu0.3 [7658 kB]
+Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libxml2 amd64 2.9.3+dfsg1-1ubuntu0.5 [697 kB]
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-bin amd64 2.4.18-2ubuntu3.5 [925 kB]
+Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-utils amd64 2.4.18-2ubuntu3.5 [82.3 kB]
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-data all 2.4.18-2ubuntu3.5 [162 kB]
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2 amd64 2.4.18-2ubuntu3.5 [86.7 kB]
+Get:43 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmagic1 amd64 1:5.25-2ubuntu1 [216 kB]
+Get:44 http://archive.ubuntu.com/ubuntu xenial/main amd64 file amd64 1:5.25-2ubuntu1 [21.2 kB]
+Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 iproute2 amd64 4.3.0-1ubuntu3.16.04.3 [522 kB]
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.2 [54.9 kB]
+Get:47 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.10 [153 kB]
+Get:48 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.10 [666 kB]
+Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.7 [223 kB]
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.7 [105 kB]
+Get:51 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxtables11 amd64 1.6.0-2ubuntu3 [27.2 kB]
+Get:52 http://archive.ubuntu.com/ubuntu xenial/main amd64 netbase all 5.3 [12.9 kB]
+Get:53 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules amd64 2.1.26.dfsg1-14build1 [47.5 kB]
+Get:54 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssl amd64 1.0.2g-1ubuntu4.10 [492 kB]
+Get:55 http://archive.ubuntu.com/ubuntu xenial/main amd64 xml-core all 0.13+nmu2 [23.3 kB]
+Get:56 http://archive.ubuntu.com/ubuntu xenial/main amd64 rename all 0.20-4 [12.0 kB]
+Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 ssl-cert all 1.0.37 [16.9 kB]
+Fetched 22.7 MB in 2s (9276 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libatm1:amd64.
+(Reading database ... 4816 files and directories currently installed.)
+Preparing to unpack .../libatm1_1%3a2.5.1-1.5_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-1.5) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../libmnl0_1.0.3-5_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.3-5) ...
+Selecting previously unselected package libgdbm3:amd64.
+Preparing to unpack .../libgdbm3_1.8.3-13.1_amd64.deb ...
+Unpacking libgdbm3:amd64 (1.8.3-13.1) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Selecting previously unselected package perl-modules-5.22.
+Preparing to unpack .../perl-modules-5.22_5.22.1-9ubuntu0.2_all.deb ...
+Unpacking perl-modules-5.22 (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package libperl5.22:amd64.
+Preparing to unpack .../libperl5.22_5.22.1-9ubuntu0.2_amd64.deb ...
+Unpacking libperl5.22:amd64 (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../perl_5.22.1-9ubuntu0.2_amd64.deb ...
+Unpacking perl (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../mime-support_3.59ubuntu1_all.deb ...
+Unpacking mime-support (3.59ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../libapr1_1.5.2-3_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.2-3) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.1.0-7ubuntu0.16.04.3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Selecting previously unselected package libssl1.0.0:amd64.
+Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.10_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.2g-1ubuntu4.10) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../libsqlite3-0_3.11.0-1ubuntu1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libnettle6:amd64.
+Preparing to unpack .../libnettle6_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libhogweed4:amd64.
+Preparing to unpack .../libhogweed4_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libidn11:amd64.
+Preparing to unpack .../libidn11_1.32-3ubuntu1.2_amd64.deb ...
+Unpacking libidn11:amd64 (1.32-3ubuntu1.2) ...
+Selecting previously unselected package libffi6:amd64.
+Preparing to unpack .../libffi6_3.2.1-4_amd64.deb ...
+Unpacking libffi6:amd64 (3.2.1-4) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../libp11-kit0_0.23.2-5~ubuntu16.04.1_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.3_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Selecting previously unselected package libgnutls30:amd64.
+Preparing to unpack .../libgnutls30_3.4.10-4ubuntu1.4_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.4.10-4ubuntu1.4) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../libroken18-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.2_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package liblua5.1-0:amd64.
+Preparing to unpack .../liblua5.1-0_5.1.5-8ubuntu1_amd64.deb ...
+Unpacking liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Selecting previously unselected package libicu55:amd64.
+Preparing to unpack .../libicu55_55.1-7ubuntu0.3_amd64.deb ...
+Unpacking libicu55:amd64 (55.1-7ubuntu0.3) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.3+dfsg1-1ubuntu0.5_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.5) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2-bin (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../apache2-utils_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2-utils (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.18-2ubuntu3.5_all.deb ...
+Unpacking apache2-data (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2 (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../libmagic1_1%3a5.25-2ubuntu1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.25-2ubuntu1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../file_1%3a5.25-2ubuntu1_amd64.deb ...
+Unpacking file (1:5.25-2ubuntu1) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../iproute2_4.3.0-1ubuntu3.16.04.3_amd64.deb ...
+Unpacking iproute2 (4.3.0-1ubuntu3.16.04.3) ...
+Selecting previously unselected package ifupdown.
+Preparing to unpack .../ifupdown_0.8.10ubuntu1.2_amd64.deb ...
+Unpacking ifupdown (0.8.10ubuntu1.2) ...
+Selecting previously unselected package libisc-export160.
+Preparing to unpack .../libisc-export160_1%3a9.10.3.dfsg.P4-8ubuntu1.10_amd64.deb ...
+Unpacking libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Selecting previously unselected package libdns-export162.
+Preparing to unpack .../libdns-export162_1%3a9.10.3.dfsg.P4-8ubuntu1.10_amd64.deb ...
+Unpacking libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Selecting previously unselected package isc-dhcp-client.
+Preparing to unpack .../isc-dhcp-client_4.3.3-5ubuntu12.7_amd64.deb ...
+Unpacking isc-dhcp-client (4.3.3-5ubuntu12.7) ...
+Selecting previously unselected package isc-dhcp-common.
+Preparing to unpack .../isc-dhcp-common_4.3.3-5ubuntu12.7_amd64.deb ...
+Unpacking isc-dhcp-common (4.3.3-5ubuntu12.7) ...
+Selecting previously unselected package libxtables11:amd64.
+Preparing to unpack .../libxtables11_1.6.0-2ubuntu3_amd64.deb ...
+Unpacking libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../archives/netbase_5.3_all.deb ...
+Unpacking netbase (5.3) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../openssl_1.0.2g-1ubuntu4.10_amd64.deb ...
+Unpacking openssl (1.0.2g-1ubuntu4.10) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Unpacking xml-core (0.13+nmu2) ...
+Selecting previously unselected package rename.
+Preparing to unpack .../archives/rename_0.20-4_all.deb ...
+Unpacking rename (0.20-4) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.37_all.deb ...
+Unpacking ssl-cert (1.0.37) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21) ...
+Setting up libatm1:amd64 (1:2.5.1-1.5) ...
+Setting up libmnl0:amd64 (1.0.3-5) ...
+Setting up libgdbm3:amd64 (1.8.3-13.1) ...
+Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Setting up perl-modules-5.22 (5.22.1-9ubuntu0.2) ...
+Setting up libperl5.22:amd64 (5.22.1-9ubuntu0.2) ...
+Setting up perl (5.22.1-9ubuntu0.2) ...
+update-alternatives: using /usr/bin/prename to provide /usr/bin/rename (rename) in auto mode
+Setting up mime-support (3.59ubuntu1) ...
+Setting up libapr1:amd64 (1.5.2-3) ...
+Setting up libexpat1:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Setting up libssl1.0.0:amd64 (1.0.2g-1ubuntu4.10) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Setting up libaprutil1:amd64 (1.5.4-1build1) ...
+Setting up libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Setting up libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libidn11:amd64 (1.32-3ubuntu1.2) ...
+Setting up libffi6:amd64 (3.2.1-4) ...
+Setting up libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Setting up libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Setting up libgnutls30:amd64 (3.4.10-4ubuntu1.4) ...
+Setting up libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Setting up libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Setting up liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Setting up libicu55:amd64 (55.1-7ubuntu0.3) ...
+Setting up libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.5) ...
+Setting up apache2-bin (2.4.18-2ubuntu3.5) ...
+Setting up apache2-utils (2.4.18-2ubuntu3.5) ...
+Setting up apache2-data (2.4.18-2ubuntu3.5) ...
+Setting up apache2 (2.4.18-2ubuntu3.5) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libmagic1:amd64 (1:5.25-2ubuntu1) ...
+Setting up file (1:5.25-2ubuntu1) ...
+Setting up iproute2 (4.3.0-1ubuntu3.16.04.3) ...
+Setting up ifupdown (0.8.10ubuntu1.2) ...
+Creating /etc/network/interfaces.
+Setting up libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Setting up libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Setting up isc-dhcp-client (4.3.3-5ubuntu12.7) ...
+Setting up isc-dhcp-common (4.3.3-5ubuntu12.7) ...
+Setting up libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Setting up netbase (5.3) ...
+Setting up libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up openssl (1.0.2g-1ubuntu4.10) ...
+Setting up xml-core (0.13+nmu2) ...
+Setting up rename (0.20-4) ...
+update-alternatives: using /usr/bin/file-rename to provide /usr/bin/rename (rename) in auto mode
+Setting up ssl-cert (1.0.37) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21) ...
+Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+root@38194aee6ea1:/# root@ip-172images^C
+root@ip-172-31-92-171:~# docker exec -it ^C
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                  NAMES
+38194aee6ea1        ubuntu              "/bin/bash"         3 minutes ago       Up 3 minutes        0.0.0.0:8080->80/tcp   inspiring_babbage
+642dd2aa3e89        centos              "/bin/bash"         About an hour ago   Up About an hour                           naughty_noether
+root@ip-172-31-92-171:~# docker exec -it 38194aee6ea1 /bin/bash
+root@38194aee6ea1:/# service apache2 status
+ * apache2 is not running
+root@38194aee6ea1:/# service apache2 start
+ * Starting Apache httpd web server apache2                                                                                                                             AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.3. Set the 'ServerName' directive globally to suppress this message
+ *
+root@38194aee6ea1:/# service apache2 status
+ * apache2 is running
+root@38194aee6ea1:/# root@ip-172-31-92-171:~# history
+    1  pwd
+    2  docker ps -a
+    3  docker stop beea70c486c6
+    4  docker exec -it beea70c486c6
+    5  docker ps -a
+    6  docker start beea70c486c6
+    7  docker ps -a
+    8  docker exec -it beea70c486c6
+    9  docker stop beea70c486c6
+   10  docker exec -it beea70c486c6 /bin/bash
+   11  docker start beea70c486c6
+   12  docker exec -it beea70c486c6 /bin/bash
+   13  docker ps -a
+   14  docker rm 419f051e17e8
+   15  docker ps -a
+   16  docker rmi beea70c486c6
+   17  top
+   18  docker commit beea70c486c6 newimageubuntu
+   19  docker ps -a
+   20  docker commit beea70c486c6 newimageubuntu
+   21  docker ps
+   22  docker ps -a
+   23  docker commit beea70c486c6 newimageubuntuin
+   24  docker images
+   25  docker rm beea70c486c6
+   26  docker stop beea70c486c6
+   27  docker rm beea70c486c6
+   28  docker images
+   29  docker ps -a
+   30  docker rmi newimageubuntuin
+   31  docker images
+   32  docker rmi *
+   33  docker rmi cent*
+   34  top
+   35  netstat -ntulp | grep :80
+   36  netstat -ntulp | grep :80 > oy.txt
+   37  ls -l
+   38  cat oy.txt
+   39  netstat -ntulp |grep :80 > oy.txt
+   40  ls -l
+   41  netstat -ntulp |grep :22 > oy.txt
+   42  ls -l
+   43  more oy.txt
+   44  netstat -ntulp |grep :80 > oy1.txt
+   45  ls -l
+   46  netstat -ntulp |grep :80 > oy1.txt
+   47  ls -l
+   48  netstat -ntulp |grep :81 > oy1.txt
+   49  ls -l
+   50  docker images
+   51  docker run -it -p 8080:80 ubuntu /bin/bash
+   52  docker ps -a
+   53  docker exec -it 38194aee6ea1 /bin/bash
+   54  history
+root@ip-172-31-92-171:~# docker run -it -p 8081:80 ubuntu /bin/bash
+root@f9d7e317c681:/# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:3 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [58.3 kB]
+Get:4 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [554 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+Get:6 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
+Get:7 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [253 kB]
+Get:8 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [3486 B]
+Get:9 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial/universe Sources [9802 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [239 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [924 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [747 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [18.5 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [5153 B]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [7179 B]
+Fetched 24.8 MB in 4s (5183 kB/s)
+Reading package lists... Done
+root@f9d7e317c681:/# apt-get install apache2
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils file ifupdown iproute2 isc-dhcp-client isc-dhcp-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libasn1-8-heimdal libatm1 libdns-export162 libexpat1 libffi6 libgdbm3 libgmp10 libgnutls30 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libicu55 libidn11 libisc-export160 libkrb5-26-heimdal libldap-2.4-2 liblua5.1-0 libmagic1 libmnl0 libnettle6
+  libp11-kit0 libperl5.22 libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal libxml2 libxtables11
+  mime-support netbase openssl perl perl-modules-5.22 rename sgml-base ssl-cert xml-core
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw ppp rdnssd iproute2-doc resolvconf avahi-autoipd isc-dhcp-client-ddns apparmor
+  gnutls-bin libsasl2-modules-otp libsasl2-modules-ldap libsasl2-modules-sql libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal ca-certificates perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make sgml-base-doc openssl-blacklist debhelper
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils file ifupdown iproute2 isc-dhcp-client isc-dhcp-common libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libasn1-8-heimdal libatm1 libdns-export162 libexpat1 libffi6 libgdbm3 libgmp10 libgnutls30 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libicu55 libidn11 libisc-export160 libkrb5-26-heimdal libldap-2.4-2 liblua5.1-0 libmagic1 libmnl0 libnettle6
+  libp11-kit0 libperl5.22 libroken18-heimdal libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal libxml2 libxtables11
+  mime-support netbase openssl perl perl-modules-5.22 rename sgml-base ssl-cert xml-core
+0 upgraded, 57 newly installed, 0 to remove and 7 not upgraded.
+Need to get 22.7 MB of archives.
+After this operation, 102 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmnl0 amd64 1.0.3-5 [12.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-modules-5.22 all 5.22.1-9ubuntu0.2 [2661 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libperl5.22 amd64 5.22.1-9ubuntu0.2 [3391 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl amd64 5.22.1-9ubuntu0.2 [237 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 mime-support all 3.59ubuntu1 [31.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 libapr1 amd64 1.5.2-3 [86.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1 amd64 2.1.0-7ubuntu0.16.04.3 [71.2 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.10 [1083 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1 amd64 1.5.4-1build1 [77.1 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsqlite3-0 amd64 3.11.0-1ubuntu1 [396 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-dbd-sqlite3 amd64 1.5.4-1build1 [10.6 kB]
+Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnettle6 amd64 3.2-1ubuntu0.16.04.1 [93.5 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhogweed4 amd64 3.2-1ubuntu0.16.04.1 [136 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libidn11 amd64 1.32-3ubuntu1.2 [46.5 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libp11-kit0 amd64 0.23.2-5~ubuntu16.04.1 [105 kB]
+Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.3 [43.5 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgnutls30 amd64 3.4.10-4ubuntu1.4 [548 kB]
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libroken18-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [41.4 kB]
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasn1-8-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [174 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhcrypto4-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [85.0 kB]
+Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimbase1-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [29.3 kB]
+Get:27 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwind0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [47.8 kB]
+Get:28 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhx509-5-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [107 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-26-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [202 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimntlm0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [15.1 kB]
+Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi3-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [96.1 kB]
+Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14build1 [14.5 kB]
+Get:33 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14build1 [48.7 kB]
+Get:34 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.2 [160 kB]
+Get:35 http://archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-ldap amd64 1.5.4-1build1 [8720 B]
+Get:36 http://archive.ubuntu.com/ubuntu xenial/main amd64 liblua5.1-0 amd64 5.1.5-8ubuntu1 [102 kB]
+Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libicu55 amd64 55.1-7ubuntu0.3 [7658 kB]
+Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libxml2 amd64 2.9.3+dfsg1-1ubuntu0.5 [697 kB]
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-bin amd64 2.4.18-2ubuntu3.5 [925 kB]
+Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-utils amd64 2.4.18-2ubuntu3.5 [82.3 kB]
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-data all 2.4.18-2ubuntu3.5 [162 kB]
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2 amd64 2.4.18-2ubuntu3.5 [86.7 kB]
+Get:43 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmagic1 amd64 1:5.25-2ubuntu1 [216 kB]
+Get:44 http://archive.ubuntu.com/ubuntu xenial/main amd64 file amd64 1:5.25-2ubuntu1 [21.2 kB]
+Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 iproute2 amd64 4.3.0-1ubuntu3.16.04.3 [522 kB]
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.2 [54.9 kB]
+Get:47 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.10 [153 kB]
+Get:48 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.10 [666 kB]
+Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.7 [223 kB]
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.7 [105 kB]
+Get:51 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxtables11 amd64 1.6.0-2ubuntu3 [27.2 kB]
+Get:52 http://archive.ubuntu.com/ubuntu xenial/main amd64 netbase all 5.3 [12.9 kB]
+Get:53 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules amd64 2.1.26.dfsg1-14build1 [47.5 kB]
+Get:54 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssl amd64 1.0.2g-1ubuntu4.10 [492 kB]
+Get:55 http://archive.ubuntu.com/ubuntu xenial/main amd64 xml-core all 0.13+nmu2 [23.3 kB]
+Get:56 http://archive.ubuntu.com/ubuntu xenial/main amd64 rename all 0.20-4 [12.0 kB]
+Get:57 http://archive.ubuntu.com/ubuntu xenial/main amd64 ssl-cert all 1.0.37 [16.9 kB]
+Fetched 22.7 MB in 2s (9092 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libatm1:amd64.
+(Reading database ... 4768 files and directories currently installed.)
+Preparing to unpack .../libatm1_1%3a2.5.1-1.5_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-1.5) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../libmnl0_1.0.3-5_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.3-5) ...
+Selecting previously unselected package libgdbm3:amd64.
+Preparing to unpack .../libgdbm3_1.8.3-13.1_amd64.deb ...
+Unpacking libgdbm3:amd64 (1.8.3-13.1) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../sgml-base_1.26+nmu4ubuntu1_all.deb ...
+Unpacking sgml-base (1.26+nmu4ubuntu1) ...
+Selecting previously unselected package perl-modules-5.22.
+Preparing to unpack .../perl-modules-5.22_5.22.1-9ubuntu0.2_all.deb ...
+Unpacking perl-modules-5.22 (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package libperl5.22:amd64.
+Preparing to unpack .../libperl5.22_5.22.1-9ubuntu0.2_amd64.deb ...
+Unpacking libperl5.22:amd64 (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../perl_5.22.1-9ubuntu0.2_amd64.deb ...
+Unpacking perl (5.22.1-9ubuntu0.2) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../mime-support_3.59ubuntu1_all.deb ...
+Unpacking mime-support (3.59ubuntu1) ...
+Selecting previously unselected package libapr1:amd64.
+Preparing to unpack .../libapr1_1.5.2-3_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.2-3) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.1.0-7ubuntu0.16.04.3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Selecting previously unselected package libssl1.0.0:amd64.
+Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.10_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.2g-1ubuntu4.10) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../libsqlite3-0_3.11.0-1ubuntu1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libnettle6:amd64.
+Preparing to unpack .../libnettle6_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libhogweed4:amd64.
+Preparing to unpack .../libhogweed4_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libidn11:amd64.
+Preparing to unpack .../libidn11_1.32-3ubuntu1.2_amd64.deb ...
+Unpacking libidn11:amd64 (1.32-3ubuntu1.2) ...
+Selecting previously unselected package libffi6:amd64.
+Preparing to unpack .../libffi6_3.2.1-4_amd64.deb ...
+Unpacking libffi6:amd64 (3.2.1-4) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../libp11-kit0_0.23.2-5~ubuntu16.04.1_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.3_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Selecting previously unselected package libgnutls30:amd64.
+Preparing to unpack .../libgnutls30_3.4.10-4ubuntu1.4_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.4.10-4ubuntu1.4) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../libroken18-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.2_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package liblua5.1-0:amd64.
+Preparing to unpack .../liblua5.1-0_5.1.5-8ubuntu1_amd64.deb ...
+Unpacking liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Selecting previously unselected package libicu55:amd64.
+Preparing to unpack .../libicu55_55.1-7ubuntu0.3_amd64.deb ...
+Unpacking libicu55:amd64 (55.1-7ubuntu0.3) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../libxml2_2.9.3+dfsg1-1ubuntu0.5_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.5) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2-bin (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../apache2-utils_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2-utils (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.18-2ubuntu3.5_all.deb ...
+Unpacking apache2-data (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.18-2ubuntu3.5_amd64.deb ...
+Unpacking apache2 (2.4.18-2ubuntu3.5) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../libmagic1_1%3a5.25-2ubuntu1_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.25-2ubuntu1) ...
+Selecting previously unselected package file.
+Preparing to unpack .../file_1%3a5.25-2ubuntu1_amd64.deb ...
+Unpacking file (1:5.25-2ubuntu1) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../iproute2_4.3.0-1ubuntu3.16.04.3_amd64.deb ...
+Unpacking iproute2 (4.3.0-1ubuntu3.16.04.3) ...
+Selecting previously unselected package ifupdown.
+Preparing to unpack .../ifupdown_0.8.10ubuntu1.2_amd64.deb ...
+Unpacking ifupdown (0.8.10ubuntu1.2) ...
+Selecting previously unselected package libisc-export160.
+Preparing to unpack .../libisc-export160_1%3a9.10.3.dfsg.P4-8ubuntu1.10_amd64.deb ...
+Unpacking libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Selecting previously unselected package libdns-export162.
+Preparing to unpack .../libdns-export162_1%3a9.10.3.dfsg.P4-8ubuntu1.10_amd64.deb ...
+Unpacking libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Selecting previously unselected package isc-dhcp-client.
+Preparing to unpack .../isc-dhcp-client_4.3.3-5ubuntu12.7_amd64.deb ...
+Unpacking isc-dhcp-client (4.3.3-5ubuntu12.7) ...
+Selecting previously unselected package isc-dhcp-common.
+Preparing to unpack .../isc-dhcp-common_4.3.3-5ubuntu12.7_amd64.deb ...
+Unpacking isc-dhcp-common (4.3.3-5ubuntu12.7) ...
+Selecting previously unselected package libxtables11:amd64.
+Preparing to unpack .../libxtables11_1.6.0-2ubuntu3_amd64.deb ...
+Unpacking libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../archives/netbase_5.3_all.deb ...
+Unpacking netbase (5.3) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../openssl_1.0.2g-1ubuntu4.10_amd64.deb ...
+Unpacking openssl (1.0.2g-1ubuntu4.10) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../xml-core_0.13+nmu2_all.deb ...
+Unpacking xml-core (0.13+nmu2) ...
+Selecting previously unselected package rename.
+Preparing to unpack .../archives/rename_0.20-4_all.deb ...
+Unpacking rename (0.20-4) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.37_all.deb ...
+Unpacking ssl-cert (1.0.37) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21) ...
+Setting up libatm1:amd64 (1:2.5.1-1.5) ...
+Setting up libmnl0:amd64 (1.0.3-5) ...
+Setting up libgdbm3:amd64 (1.8.3-13.1) ...
+Setting up sgml-base (1.26+nmu4ubuntu1) ...
+Setting up perl-modules-5.22 (5.22.1-9ubuntu0.2) ...
+Setting up libperl5.22:amd64 (5.22.1-9ubuntu0.2) ...
+Setting up perl (5.22.1-9ubuntu0.2) ...
+update-alternatives: using /usr/bin/prename to provide /usr/bin/rename (rename) in auto mode
+Setting up mime-support (3.59ubuntu1) ...
+Setting up libapr1:amd64 (1.5.2-3) ...
+Setting up libexpat1:amd64 (2.1.0-7ubuntu0.16.04.3) ...
+Setting up libssl1.0.0:amd64 (1.0.2g-1ubuntu4.10) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Setting up libaprutil1:amd64 (1.5.4-1build1) ...
+Setting up libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Setting up libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libidn11:amd64 (1.32-3ubuntu1.2) ...
+Setting up libffi6:amd64 (3.2.1-4) ...
+Setting up libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Setting up libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
+Setting up libgnutls30:amd64 (3.4.10-4ubuntu1.4) ...
+Setting up libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Setting up libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Setting up liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Setting up libicu55:amd64 (55.1-7ubuntu0.3) ...
+Setting up libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.5) ...
+Setting up apache2-bin (2.4.18-2ubuntu3.5) ...
+Setting up apache2-utils (2.4.18-2ubuntu3.5) ...
+Setting up apache2-data (2.4.18-2ubuntu3.5) ...
+Setting up apache2 (2.4.18-2ubuntu3.5) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libmagic1:amd64 (1:5.25-2ubuntu1) ...
+Setting up file (1:5.25-2ubuntu1) ...
+Setting up iproute2 (4.3.0-1ubuntu3.16.04.3) ...
+Setting up ifupdown (0.8.10ubuntu1.2) ...
+Creating /etc/network/interfaces.
+Setting up libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Setting up libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
+Setting up isc-dhcp-client (4.3.3-5ubuntu12.7) ...
+Setting up isc-dhcp-common (4.3.3-5ubuntu12.7) ...
+Setting up libxtables11:amd64 (1.6.0-2ubuntu3) ...
+Setting up netbase (5.3) ...
+Setting up libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up openssl (1.0.2g-1ubuntu4.10) ...
+Setting up xml-core (0.13+nmu2) ...
+Setting up rename (0.20-4) ...
+update-alternatives: using /usr/bin/file-rename to provide /usr/bin/rename (rename) in auto mode
+Setting up ssl-cert (1.0.37) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21) ...
+Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
+root@f9d7e317c681:/# service apache2 start
+ * Starting Apache httpd web server apache2                                                                                                                             AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.4. Set the 'ServerName' directive globally to suppress this message
+ *
+root@f9d7e317c681:/# root@ip-172-31-92-171:~# history
+    1  pwd
+    2  docker ps -a
+    3  docker stop beea70c486c6
+    4  docker exec -it beea70c486c6
+    5  docker ps -a
+    6  docker start beea70c486c6
+    7  docker ps -a
+    8  docker exec -it beea70c486c6
+    9  docker stop beea70c486c6
+   10  docker exec -it beea70c486c6 /bin/bash
+   11  docker start beea70c486c6
+   12  docker exec -it beea70c486c6 /bin/bash
+   13  docker ps -a
+   14  docker rm 419f051e17e8
+   15  docker ps -a
+   16  docker rmi beea70c486c6
+   17  top
+   18  docker commit beea70c486c6 newimageubuntu
+   19  docker ps -a
+   20  docker commit beea70c486c6 newimageubuntu
+   21  docker ps
+   22  docker ps -a
+   23  docker commit beea70c486c6 newimageubuntuin
+   24  docker images
+   25  docker rm beea70c486c6
+   26  docker stop beea70c486c6
+   27  docker rm beea70c486c6
+   28  docker images
+   29  docker ps -a
+   30  docker rmi newimageubuntuin
+   31  docker images
+   32  docker rmi *
+   33  docker rmi cent*
+   34  top
+   35  netstat -ntulp | grep :80
+   36  netstat -ntulp | grep :80 > oy.txt
+   37  ls -l
+   38  cat oy.txt
+   39  netstat -ntulp |grep :80 > oy.txt
+   40  ls -l
+   41  netstat -ntulp |grep :22 > oy.txt
+   42  ls -l
+   43  more oy.txt
+   44  netstat -ntulp |grep :80 > oy1.txt
+   45  ls -l
+   46  netstat -ntulp |grep :80 > oy1.txt
+   47  ls -l
+   48  netstat -ntulp |grep :81 > oy1.txt
+   49  ls -l
+   50  docker images
+   51  docker run -it -p 8080:80 ubuntu /bin/bash
+   52  docker ps -a
+   53  docker exec -it 38194aee6ea1 /bin/bash
+   54  history
+   55  docker run -it -p 8081:80 ubuntu /bin/bash
+   56  history
+root@ip-172-31-92-171:~# top
+top - 13:36:03 up  2:32,  2 users,  load average: 0.05, 0.07, 0.02
+Tasks: 129 total,   1 running, 128 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.3 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1014552 total,   158608 free,   108888 used,   747056 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   699340 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+    1 root      20   0   37792   5044   3208 S  0.0  0.5   0:02.80 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.20 ksoftirqd/0
+    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.14 rcu_sched
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh
+    9 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.04 watchdog/0
+   11 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs
+   12 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns
+   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 perf
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.01 xenwatch
+   15 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus
+   17 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd
+   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback
+   19 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd
+   20 root      39  19       0      0      0 S  0.0  0.0   0:00.03 khugepaged
+   21 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 crypto
+   22 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd
+   23 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   24 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kblockd
+   25 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 ata_sff
+   26 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 md
+   27 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 devfreq_wq
+   30 root      20   0       0      0      0 S  0.0  0.0   0:00.23 kswapd0
+   31 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 vmstat
+   32 root      20   0       0      0      0 S  0.0  0.0   0:00.00 fsnotify_mark
+   33 root      20   0       0      0      0 S  0.0  0.0   0:00.00 ecryptfs-kthrea
+   49 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kthrotld
+   50 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   51 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   52 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   53 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   54 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   55 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   56 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+   57 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset
+root@ip-172-31-92-171:~# ^C
+root@ip-172-31-92-171:~# history
+    1  pwd
+    2  docker ps -a
+    3  docker stop beea70c486c6
+    4  docker exec -it beea70c486c6
+    5  docker ps -a
+    6  docker start beea70c486c6
+    7  docker ps -a
+    8  docker exec -it beea70c486c6
+    9  docker stop beea70c486c6
+   10  docker exec -it beea70c486c6 /bin/bash
+   11  docker start beea70c486c6
+   12  docker exec -it beea70c486c6 /bin/bash
+   13  docker ps -a
+   14  docker rm 419f051e17e8
+   15  docker ps -a
+   16  docker rmi beea70c486c6
+   17  top
+   18  docker commit beea70c486c6 newimageubuntu
+   19  docker ps -a
+   20  docker commit beea70c486c6 newimageubuntu
+   21  docker ps
+   22  docker ps -a
+   23  docker commit beea70c486c6 newimageubuntuin
+   24  docker images
+   25  docker rm beea70c486c6
+   26  docker stop beea70c486c6
+   27  docker rm beea70c486c6
+   28  docker images
+   29  docker ps -a
+   30  docker rmi newimageubuntuin
+   31  docker images
+   32  docker rmi *
+   33  docker rmi cent*
+   34  top
+   35  netstat -ntulp | grep :80
+   36  netstat -ntulp | grep :80 > oy.txt
+   37  ls -l
+   38  cat oy.txt
+   39  netstat -ntulp |grep :80 > oy.txt
+   40  ls -l
+   41  netstat -ntulp |grep :22 > oy.txt
+   42  ls -l
+   43  more oy.txt
+   44  netstat -ntulp |grep :80 > oy1.txt
+   45  ls -l
+   46  netstat -ntulp |grep :80 > oy1.txt
+   47  ls -l
+   48  netstat -ntulp |grep :81 > oy1.txt
+   49  ls -l
+   50  docker images
+   51  docker run -it -p 8080:80 ubuntu /bin/bash
+   52  docker ps -a
+   53  docker exec -it 38194aee6ea1 /bin/bash
+   54  history
+   55  docker run -it -p 8081:80 ubuntu /bin/bash
+   56  history
+   57  top
+   58  history
+root@ip-172-31-92-171:~# netstat -ntulp |grep :22 > oy.txt
+root@ip-172-31-92-171:~# ls -l
+total 4
+-rw-r--r-- 1 root root   0 Feb  9 13:22 oy1.txt
+-rw-r--r-- 1 root root 194 Feb  9 13:38 oy.txt
+root@ip-172-31-92-171:~# cat oy.txt
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1322/sshd
+tcp6       0      0 :::22                   :::*                    LISTEN      1322/sshd
+root@ip-172-31-92-171:~# netstat -ntulp |grep :80 > o2y.txt
+root@ip-172-31-92-171:~# ls -l
+total 8
+-rw-r--r-- 1 root root 198 Feb  9 13:39 o2y.txt
+-rw-r--r-- 1 root root   0 Feb  9 13:22 oy1.txt
+-rw-r--r-- 1 root root 194 Feb  9 13:38 oy.txt
+root@ip-172-31-92-171:~# cat o2y.txt
+tcp6       0      0 :::8080                 :::*                    LISTEN      15323/docker-proxy
+tcp6       0      0 :::8081                 :::*                    LISTEN      16720/docker-proxy
+root@ip-172-31-92-171:~# docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimageubuntu      latest              0f032b4e5537        30 minutes ago      250 MB
+<none>              <none>              6aec686a3016        30 minutes ago      250 MB
+<none>              <none>              192f4b21c78e        About an hour ago   250 MB
+ubuntu              latest              0458a4468cbc        2 weeks ago         112 MB
+centos              latest              ff426288ea90        4 weeks ago         207 MB
+root@ip-172-31-92-171:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                  NAMES
+f9d7e317c681        ubuntu              "/bin/bash"         10 minutes ago      Up 10 minutes       0.0.0.0:8081->80/tcp   relaxed_heyrovsky
+38194aee6ea1        ubuntu              "/bin/bash"         16 minutes ago      Up 16 minutes       0.0.0.0:8080->80/tcp   inspiring_babbage
+642dd2aa3e89        centos              "/bin/bash"         About an hour ago   Up About an hour                           naughty_noether
+root@ip-172-31-92-171:~# docker exec -it f9d7e317c681 /bin/bash
+root@f9d7e317c681:/# netstat -ntulp |grep :80 > o2y.txt
+bash: netstat: command not found
+root@f9d7e317c681:/# apt-get install net-tools
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 7 not upgraded.
+Need to get 175 kB of archives.
+After this operation, 725 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 net-tools amd64 1.60-26ubuntu1 [175 kB]
+Fetched 175 kB in 0s (253 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package net-tools.
+(Reading database ... 7907 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60-26ubuntu1_amd64.deb ...
+Unpacking net-tools (1.60-26ubuntu1) ...
+Setting up net-tools (1.60-26ubuntu1) ...
+root@f9d7e317c681:/# netstat -ntulp |grep :80 > o2y.txt
+root@f9d7e317c681:/# ls -l
+total 68
+drwxr-xr-x   2 root root 4096 Feb  9 13:41 bin
+drwxr-xr-x   2 root root 4096 Apr 12  2016 boot
+drwxr-xr-x   5 root root  360 Feb  9 13:29 dev
+drwxr-xr-x  73 root root 4096 Feb  9 13:34 etc
+drwxr-xr-x   2 root root 4096 Apr 12  2016 home
+drwxr-xr-x  12 root root 4096 Feb  9 13:33 lib
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 lib64
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 media
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 mnt
+-rw-r--r--   1 root root   97 Feb  9 13:41 o2y.txt
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 opt
+dr-xr-xr-x 144 root root    0 Feb  9 13:29 proc
+drwx------   2 root root 4096 Jan 23 22:49 root
+drwxr-xr-x   8 root root 4096 Feb  9 13:34 run
+drwxr-xr-x   2 root root 4096 Feb  9 13:41 sbin
+drwxr-xr-x   2 root root 4096 Jan 23 22:49 srv
+dr-xr-xr-x  13 root root    0 Feb  9 13:24 sys
+drwxrwxrwt   2 root root 4096 Feb  9 13:41 tmp
+drwxr-xr-x  16 root root 4096 Feb  9 13:33 usr
+drwxr-xr-x  17 root root 4096 Feb  9 13:33 var
+root@f9d7e317c681:/# cat o2y.txt
+tcp6       0      0 :::80                   :::*                    LISTEN      1162/apache2
+root@f9d7e317c681:/# root@ip-172-31-92-171:~# history
+    1  pwd
+    2  docker ps -a
+    3  docker stop beea70c486c6
+    4  docker exec -it beea70c486c6
+    5  docker ps -a
+    6  docker start beea70c486c6
+    7  docker ps -a
+    8  docker exec -it beea70c486c6
+    9  docker stop beea70c486c6
+   10  docker exec -it beea70c486c6 /bin/bash
+   11  docker start beea70c486c6
+   12  docker exec -it beea70c486c6 /bin/bash
+   13  docker ps -a
+   14  docker rm 419f051e17e8
+   15  docker ps -a
+   16  docker rmi beea70c486c6
+   17  top
+   18  docker commit beea70c486c6 newimageubuntu
+   19  docker ps -a
+   20  docker commit beea70c486c6 newimageubuntu
+   21  docker ps
+   22  docker ps -a
+   23  docker commit beea70c486c6 newimageubuntuin
+   24  docker images
+   25  docker rm beea70c486c6
+   26  docker stop beea70c486c6
+   27  docker rm beea70c486c6
+   28  docker images
+   29  docker ps -a
+   30  docker rmi newimageubuntuin
+   31  docker images
+   32  docker rmi *
+   33  docker rmi cent*
+   34  top
+   35  netstat -ntulp | grep :80
+   36  netstat -ntulp | grep :80 > oy.txt
+   37  ls -l
+   38  cat oy.txt
+   39  netstat -ntulp |grep :80 > oy.txt
+   40  ls -l
+   41  netstat -ntulp |grep :22 > oy.txt
+   42  ls -l
+   43  more oy.txt
+   44  netstat -ntulp |grep :80 > oy1.txt
+   45  ls -l
+   46  netstat -ntulp |grep :80 > oy1.txt
+   47  ls -l
+   48  netstat -ntulp |grep :81 > oy1.txt
+   49  ls -l
+   50  docker images
+   51  docker run -it -p 8080:80 ubuntu /bin/bash
+   52  docker ps -a
+   53  docker exec -it 38194aee6ea1 /bin/bash
+   54  history
+   55  docker run -it -p 8081:80 ubuntu /bin/bash
+   56  history
+   57  top
+   58  history
+   59  netstat -ntulp |grep :22 > oy.txt
+   60  ls -l
+   61  cat oy.txt
+   62  netstat -ntulp |grep :80 > o2y.txt
+   63  ls -l
+   64  cat o2y.txt
+   65  docker images
+   66  docker ps -a
+   67  docker exec -it f9d7e317c681 /bin/bash
+   68  history
+root@ip-172-31-92-171:~#
